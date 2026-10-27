@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="js/main.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <img src="css/img/download (7).jpg" alt="Banner Film Journal" class="banner">
+
+        <h1>Film Journal</h1>
+        <p>Tu diario visual de películas</p>
+
+    </header>
+
+    <main>
+        <section class="bienvenida">
+
+            <h2>Bienvenido a Film Journal</h2>
+
+            <form id="formulario-usuario">
+
+                <input type="text" id="nombre-usuario" placeholder="Ingresá tu nombre" required>
+
+
+                <input type="number" id="año-nacimiento" placeholder="Año de nacimiento" min="1900" max="2026" step="1"
+                    required>
+
+
+                <button type="submit">Comenzar</button>
+
+            </form>
+
+            <p id="mensaje-bienvenida"></p>
+
+        </section>
+        <section id="actores">
+            <h2>Mis actores favoritos</h2>
+            <input type="text" id="actor-favorito" placeholder="Ingresá tu actor favorito">
+            <button id="boton-actor">
+                Agregar actor
+            </button>
+            <ul id="lista-actores"></ul>
+        </section>
+
+
+        <section id="agregar">
+            <h2>Agregar una película</h2>
+
+            <form id="formulario-pelicula">
+                <label for="titulo">Título de la película:</label>
+                <input type="text" id="titulo" required>
+
+
+                <label for="genero">Género:</label>
+
+                <select id="genero" required>
+                    <option value="">Seleccioná un género</option>
+                    <option value="Terror">Terror</option>
+                    <option value="Comedia">Comedia</option>
+                    <option value="Ciencia ficción">Ciencia ficción</option>
+                    <option value="Animación">Animación</option>
+                    <option value="Drama">Drama</option>
+                    <option value="Romance">Romance</option>
+                </select>
+
+
+                <button type="submit" id="submit">
+                    Agregar película
+                </button>
+            </form>
+        </section>
+
+        <section id="recomendaciones">
+            <h2>Recomendaciones según tu estado de ánimo</h2>
+            <select id="estado-animo">
+                <option value="Comedia">Feliz</option>
+                <option value="Drama">Triste</option>
+                <option value="Romance">Con ganas de emocionarme</option>
+                <option value="Ciencia ficción">Con ganas de aventura</option>
+                <option value="Comedia">Con ganas de reírme</option>
+            </select>
+
+            <button id="boton-recomendar">
+                Recomendar película
+            </button><br>
+
+            <div id="resultado-recomendacion"></div>
+        </section>
+
+        <section>
+            <h2>Buscar película</h2>
+
+            <input type="text" id="buscar-pelicula" placeholder="Ingresá el título de la película">
+
+            <button id="boton-buscar">
+                Buscar
+            </button>
+
+            <div id="resultado-busqueda"></div>
+        </section>
+
+        <p id="mensaje" aria-live="polite"></p>
+
+
+        <section id="lista-peliculas">
+            <h2>Mi colección</h2>
+
+            <button id="boton-cargar">Cargar mi diario</button>
+            <p id="estado-carga"></p>
+
+            <label for="filtro-genero">Filtrar por género:</label>
+
+            <select id="filtro-genero">
+                <option value="Todos">Todos los géneros</option>
+                <option value="Terror">Terror</option>
+                <option value="Comedia">Comedia</option>
+                <option value="Ciencia ficción">Ciencia ficción</option>
+                <option value="Animación">Animación</option>
+                <option value="Drama">Drama</option>
+                <option value="Romance">Romance</option>
+            </select>
+
+            <div id="contenedorpeliculas"></div>
+        </section>
+        <section>
+            <h2>Administrar mi diario</h2>
+
+            <button id="boton-vaciar">
+                Vaciar mi diario
+            </button>
+
+            <p id="mensaje-vaciar"></p>
+            <button id="boton-recuperar">
+                Recuperar mi diario
+            </button>
+        </section>
+
+        <section>
+            <h2>Stock de películas</h2>
+
+            <button id="boton-stock">
+                Consultar stock total
+            </button>
+
+            <p id="resultado-stock"></p>
+
+        </section>
+
+    </main>
+    <p id="recordatorio"></p>
+
+</body>
+
+
+</html>
